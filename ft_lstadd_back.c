@@ -6,7 +6,7 @@
 /*   By: basianno <basianno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 14:22:17 by basianno          #+#    #+#             */
-/*   Updated: 2026/10/28 11:16:23 by basianno         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:58:16 by basianno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
+	if (!lst || !new)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;
@@ -25,5 +27,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = new;
-	new->next = NULL;
 }

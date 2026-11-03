@@ -6,7 +6,7 @@
 /*   By: basianno <basianno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 15:59:55 by basianno          #+#    #+#             */
-/*   Updated: 2026/09/16 17:09:18 by basianno         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:40:05 by basianno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	len = ft_strlen(s1);
 	end = len - 1;

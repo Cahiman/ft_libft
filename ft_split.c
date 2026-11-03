@@ -6,7 +6,7 @@
 /*   By: basianno <basianno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 17:16:00 by basianno          #+#    #+#             */
-/*   Updated: 2026/09/20 19:58:43 by basianno         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:55:44 by basianno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ static int	ft_count_word(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	size_t	i;
-	size_t	j;
 	int		len;
 
-	i = 0;
-	j = 0;
+	size_t (i) = 0;
+	size_t (j) = 0;
+	if (!s)
+		return (NULL);
 	tab = malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
 	if (!tab)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: basianno <basianno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 14:43:49 by basianno          #+#    #+#             */
-/*   Updated: 2026/09/16 15:07:31 by basianno         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:40:49 by basianno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	sub_len;
 	size_t	string_len;
 
+	if (!s)
+		return (NULL);
 	string_len = ft_strlen(s);
 	i = 0;
 	if (start > string_len)

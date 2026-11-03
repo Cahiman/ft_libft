@@ -6,7 +6,7 @@
 /*   By: basianno <basianno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 15:45:42 by basianno          #+#    #+#             */
-/*   Updated: 2026/09/16 15:56:28 by basianno         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:56:18 by basianno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	size_t	i;
-	size_t	j;
 	size_t	total_len;
 
-	i = 0;
-	j = 0;
+	size_t (i) = 0;
+	size_t (j) = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = malloc(sizeof(char) * total_len);
 	if (!str)
